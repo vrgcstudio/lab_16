@@ -17,3 +17,33 @@ int main(){
 	
 	return 0;
 }
+
+void shuffle(int &a ,int &b ,int &c ,int &d){
+	int e[] = {a,b,c,d};
+  
+    for (int i=0; i<4 ;i++)
+    {
+        int j = i + (rand() % (4 -i));
+		
+		if(i == 0){
+			int k = e[i];
+			a = e[j];
+			e[j] = k;
+		}
+		if(i == 1){
+			int k = e[i];
+			b = e[j];
+			e[j] = k;
+		}	
+		if(i == 2){
+			int k = e[i];
+			c = e[j];
+			e[j] = k;
+		}
+		if(i == 3){
+			int k = e[i];
+			d = e[j];
+			e[j] = k;
+		}
+    }
+}
